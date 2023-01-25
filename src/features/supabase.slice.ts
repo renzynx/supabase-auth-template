@@ -5,7 +5,6 @@ import { showNotification, updateNotification } from './notification.slice';
 import { setLoading, updateUser } from './user.slice';
 
 export type Profile = Database['public']['Tables']['profiles']['Row'];
-export type Monitors = Database['public']['Tables']['monitors']['Row'];
 
 export const supabaseSlice = apiSlice.injectEndpoints({
 	endpoints: (build) => ({

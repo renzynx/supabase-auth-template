@@ -9,35 +9,6 @@ export type Json =
 export interface Database {
 	public: {
 		Tables: {
-			monitors: {
-				Row: {
-					created_at: string | null;
-					description: string | null;
-					id: number;
-					name: string;
-					type: string;
-					user_id: string;
-					uuid: string | null;
-				};
-				Insert: {
-					created_at?: string | null;
-					description?: string | null;
-					id?: number;
-					name: string;
-					type: string;
-					user_id: string;
-					uuid?: string | null;
-				};
-				Update: {
-					created_at?: string | null;
-					description?: string | null;
-					id?: number;
-					name?: string;
-					type?: string;
-					user_id?: string;
-					uuid?: string | null;
-				};
-			};
 			profiles: {
 				Row: {
 					avatar_url: string | null;

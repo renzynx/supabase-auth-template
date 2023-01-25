@@ -13,6 +13,7 @@ import { useState } from 'react';
 import { Provider } from 'react-redux';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import createCache from '@emotion/cache';
+import { APP_NAME } from '@/lib/constant';
 
 const clientSideEmotionCache = createCache({
 	key: 'css',
@@ -33,7 +34,7 @@ export default function App({
 		<>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<title>App Name</title>
+				<title>{APP_NAME}</title>
 			</Head>
 			<Provider store={store}>
 				<SessionContextProvider

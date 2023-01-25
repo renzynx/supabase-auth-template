@@ -1,6 +1,6 @@
 import { selectIsSidebarOpen, toggleSidebar } from '@/features/layout.slice';
 import { useAppDispatch } from '@/redux/store';
-import { DRAWER_WIDTH } from '@/lib/constant';
+import { APP_NAME, DRAWER_WIDTH } from '@/lib/constant';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import {
 	AppBar as MuiAppBar,
@@ -66,7 +66,7 @@ const Navbar = () => {
 					<MenuIcon />
 				</IconButton>
 				<Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-					App Name
+					{APP_NAME}
 				</Typography>
 				<Box sx={{ display: 'flex', gap: '1rem' }}>
 					{isLoading ? (

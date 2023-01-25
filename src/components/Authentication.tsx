@@ -15,6 +15,7 @@ import { SubmitHandler, useForm, Controller } from 'react-hook-form';
 import { emailRegex, passwordRegex } from '@/lib/regex';
 import router from 'next/router';
 import useNotification from '@/hooks/useNotification';
+import { APP_NAME } from '@/lib/constant';
 
 type AuthPageProps = {
 	type: 'login' | 'register' | 'forgot';
@@ -118,7 +119,7 @@ const AuthPage: FC<AuthPageProps> = ({ type }) => {
 					});
 					break;
 				default:
-					({
+					showNotification({
 						message: 'Hmm, something went wrong',
 						severity: 'error',
 					});
@@ -162,7 +163,7 @@ const AuthPage: FC<AuthPageProps> = ({ type }) => {
 						) : (
 							<>
 								<Typography variant="h4">
-									Welcome to statusfy, please{' '}
+									Welcome to {APP_NAME}, please{' '}
 									{auth === 'login' ? 'login' : 'register'} with
 								</Typography>
 								<div>
